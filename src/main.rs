@@ -5,5 +5,5 @@ fn main() {
         value2 = 2;
     }
     const MAX_POINT: u32 = 100_000;
-    println!("{} {} {}",value, value2, MAX_POINT);
+    println!("{} {} {}", value, value2, MAX_POINT);
 }
