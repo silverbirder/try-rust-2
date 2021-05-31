@@ -42,4 +42,51 @@ fn main() {
     let index = 2;
     let element = a[index];
     println!("The value of element is: {}", element);
+
+    another_function(5);
+
+    let y = {
+        let x = 3;
+        x + 1
+    };
+    println!("The value of y is: {}", y);
+
+    let x = five();
+    println!("The value of x is: {}", x);
+
+    let number = 3;
+
+    if number < 5 {
+        println!("condition was true");
+    } else {
+        println!("condition was false");
+    }
+
+    let condition = true;
+    let number = if condition {
+        5
+    } else {
+        6
+    };
+    println!("The value of number is: {}", number);
+
+    let mut number = 3;
+    while number != 0 {
+        println!("{}!", number);
+        number = number - 1;
+    }
+    println!("LIFTOFF!!!");
+
+    let a = [10, 20, 30, 40, 50];
+    for element in a.iter() {
+        println!("the value is: {}", element);
+    }
+}
+
+fn another_function(x: i32) {
+    println!("The value of x is: {}", x);
+}
+
+fn five() -> i32 {
+    5
 }
