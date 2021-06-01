@@ -35,6 +35,13 @@ fn main() {
 
     let reference_to_nothing = dangle();
     println!("{}", reference_to_nothing);
+
+    let s = String::from("hello world");
+
+    let word = first_word(&s);
+
+    // s.clear();
+    println!("the first word is: {}", word);
 }
 
 fn takes_ownership(some_string: String) {
@@ -57,4 +64,16 @@ fn dangle() -> String {
     let s = String::from("hello");
 
     s
+}
+
+fn first_word(s: &String) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    &s[..]
 }
