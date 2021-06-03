@@ -8,6 +8,7 @@ mod front_of_house {
 // use self::front_of_house::hosting;
 use crate::front_of_house::hosting::add_to_waitlist as another_add_to_waitlist;
 use std::io::{self, Write};
+pub use crate::front_of_house::hosting as alter_hosting;
 
 pub fn eat_at_restaurant() {
     crate::front_of_house::hosting::add_to_waitlist();
